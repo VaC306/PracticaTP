@@ -7,5 +7,7 @@ public class Game {
 	public Game(long seed, Level level) {
 		// TODO Auto-generated constructor stub
 	}
+	
+	private int monedas;
 
 }
