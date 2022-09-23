@@ -9,6 +9,6 @@ public class Game {
 	}
 	
 	private int monedas;
-	private int monos;
+	private int carros;
 
 }
