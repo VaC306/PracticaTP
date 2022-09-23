@@ -9,5 +9,6 @@ public class Game {
 	}
 	
 	private int monedas;
+	private int monos;
 
 }
