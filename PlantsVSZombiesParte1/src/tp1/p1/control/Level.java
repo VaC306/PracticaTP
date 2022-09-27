@@ -27,7 +27,7 @@ public enum Level {
 	 * @return the parsed {@link Level} or <code>null</code> if none match.
 	 */
 	public static Level valueOfIgnoreCase(String inputString) {
-		for (Level level : Level.values()) {
+		for (Level level : Level.values()) { 
 			if (level.name().equalsIgnoreCase(inputString)) {
 				return level;
 			}
