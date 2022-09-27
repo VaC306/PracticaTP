@@ -6,7 +6,7 @@ package tp1.p1.control;
  */
 public enum Level {
 	// TODO fill your code
-	
+	EASY(3,0.1), HARD(5, 0.2), INSANE(10, 0.3);
 	//EASY VALORS
 	
 	private int numberOfZombies;
@@ -53,5 +53,10 @@ public enum Level {
 			levelCount++;
 		}
 		return buffer.toString();
+	}
+
+	double getZombieFrequency() {
+		
+		return 0;
 	}
 }
