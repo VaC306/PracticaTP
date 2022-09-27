@@ -6,7 +6,7 @@ package tp1.p1.control;
  */
 public enum Level {
 	// TODO fill your code
-	
+	EASY(3,0.1), HARD(5, 0.2), INSANE(10, 0.3);
 	//EASY VALORS
 	
 	private int numberOfZombies;
@@ -27,7 +27,7 @@ public enum Level {
 	 * @return the parsed {@link Level} or <code>null</code> if none match.
 	 */
 	public static Level valueOfIgnoreCase(String inputString) {
-		for (Level level : Level.values()) {
+		for (Level level : Level.values()) { 
 			if (level.name().equalsIgnoreCase(inputString)) {
 				return level;
 			}
@@ -53,5 +53,10 @@ public enum Level {
 			levelCount++;
 		}
 		return buffer.toString();
+	}
+
+	double getZombieFrequency() {
+		
+		return 0;
 	}
 }

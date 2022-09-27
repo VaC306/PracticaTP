@@ -29,6 +29,7 @@ public class Controller {
 	 */
 	private void printGame() {
 		System.out.println(gamePrinter);
+	
 	}
 
 	/**
