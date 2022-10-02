@@ -54,6 +54,11 @@ public class Controller {
 		return words;
 	}
 
+	private String debug(String line) {
+		// TODO Auto-generated method stub
+		return "";
+	}
+
 	/**
 	 * Runs the game logic.
 	 */
