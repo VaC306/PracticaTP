@@ -2,61 +2,58 @@ package tp1.p1.logic.gameobjects;
 
 public class Peashooter {
 	
-	private int damage;
-	private int life;
-	private int posX;
-	private int posY;
+	private int COST;
+	private int ENDURANCE;
+	private int DAMAGE;
 	
-	public Peashooter(int damage, int life, int posX, int posY) {
+	public Peashooter(int COST, int ENDURANCE, int DAMAGE) {
 		super();
-		this.damage = damage;
-		this.life = life;
-		this.posX = posX;
-		this.posY = posY;
+		this.COST = COST;
+		this.ENDURANCE = ENDURANCE;
+		this.DAMAGE = DAMAGE;
 	}
 	
-	public int getDamage() {
-		return damage;
+	
+
+	public int getCOST() {
+		return COST;
 	}
 
 
-	public void setDamage(int damage) {
-		this.damage = damage;
+
+	public void setCOST(int cOST) {
+		COST = cOST;
 	}
 
 
-	public int getLife() {
-		return life;
+
+	public int getENDURANCE() {
+		return ENDURANCE;
 	}
 
 
-	public void setLife(int life) {
-		this.life = life;
+
+	public void setENDURANCE(int eNDURANCE) {
+		ENDURANCE = eNDURANCE;
 	}
 
 
-	public int getPosX() {
-		return posX;
+
+	public int getDAMAGE() {
+		return DAMAGE;
 	}
 
 
-	public void setPosX(int posX) {
-		this.posX = posX;
+
+	public void setDAMAGE(int dAMAGE) {
+		DAMAGE = dAMAGE;
 	}
 
 
-	public int getPosY() {
-		return posY;
-	}
-
-
-	public void setPosY(int posY) {
-		this.posY = posY;
-	}
 
 	public String toString() {
 		
-		return "P ["+ this.life + "]";
+		return "P ["+ this.ENDURANCE + "]";
 	}
 	
 	

@@ -114,7 +114,7 @@ while (!game.isFinished() && !game.isPlayerQuits()) {
 					switch (words[1]) {
 					case "sunflower":
 					case "s":       // 
-						added =  true/false 
+						added =  true/false; 
 					// llama al añadir una sun flower en esa posición: pide	al Game
 						break;
 
@@ -124,9 +124,9 @@ while (!game.isFinished() && !game.isPlayerQuits()) {
 					}
 
 					if(validPlant && added) {
-						actualiza si quieres
+						/*actualiza si quieres
 						refrescar display y si
-						quieres hacer Update
+						quieres hacer Update*/
 					}
 					break;
 
@@ -156,6 +156,11 @@ while (!game.isFinished() && !game.isPlayerQuits()) {
 		}
 
 		printEndMessage();
+	}
+
+	private char[] error(String commandParametersMissing) {
+		// funcion para expresar error
+		return null;
 	}
 
 }

@@ -38,16 +38,18 @@ public class Game {
 
 	public boolean isFinished() {
 		// true si termia el juego
-		return ;
+		return;
 		}
 
 	public boolean isPlayerDied() {
 		// true si el jugador muere
-		return 	}
+		return ; 	
+		}
 
 	public boolean isPlayerQuits() {
 		// true si el jugador decide cerrar
-		return }
+		return;
+		}
 	
 	public void playerQuits() {
 		// setter de que el jugador cierra
@@ -161,17 +163,17 @@ public class Game {
 		
 		Sunflower sunflower = // le pide a la lista el objeto, si lo hay
 		if (sunflower != null) {
-			return //string del objeto
+			return ;//string del objeto
 		}
 
 		Peashooter peashooter = // le pide a la lista el objeto, si lo hay
 		if (peashooter != null) {
-			return //string del objeto
+			return ;//string del objeto
 		}
 
 		Zombie zombie = // le pide a la lista el objeto, si lo hay
 		if (zombie != null) {
-			return //string del objeto
+			return ;//string del objeto
 		}
 		return "";
 	}

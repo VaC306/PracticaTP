@@ -2,74 +2,78 @@ package tp1.p1.logic.gameobjects;
 
 public class Sunflower {
 	
-	private int life;
-	private int posX;
-	private int posY;
-	private int damage;
-	private int generate = 10;
+	private int COST;
+	private int ENDURANCE;
+	private int DAMAGE;
+	private int COOLDOWN;
+	private int SUNCOINS;
 
 	
-	public Sunflower(int damage, int life, int posX, int posY, int generate) {
+	public Sunflower(int COST, int ENDURANCE, int DAMAGE, int COOLDOWN, int SUNCOINS) {
 		super();
-		this.damage = damage;
-		this.life = life;
-		this.posX = posX;
-		this.posY = posY;
-		this.generate = generate;
+		this.COST = COST;
+		this.ENDURANCE = ENDURANCE;
+		this.DAMAGE = DAMAGE;
+		this.COOLDOWN = COOLDOWN;
+		this.SUNCOINS = SUNCOINS;
 	}
 	
 
-	public int getLife() {
-		return life;
+	public int getCOST() {
+		return COST;
 	}
 
 
-
-	public void setLife(int life) {
-		this.life = life;
+	public void setCOST(int cOST) {
+		COST = cOST;
 	}
 
 
-
-	public int getPosX() {
-		return posX;
+	public int getENDURANCE() {
+		return ENDURANCE;
 	}
 
 
-
-	public void setPosX(int posX) {
-		this.posX = posX;
+	public void setENDURANCE(int eNDURANCE) {
+		ENDURANCE = eNDURANCE;
 	}
 
 
-
-	public int getPosY() {
-		return posY;
+	public int getDAMAGE() {
+		return DAMAGE;
 	}
 
 
-
-	public void setPosY(int posY) {
-		this.posY = posY;
+	public void setDAMAGE(int dAMAGE) {
+		DAMAGE = dAMAGE;
 	}
 
 
-
-	public int getDamage() {
-		return damage;
+	public int getCOOLDOWN() {
+		return COOLDOWN;
 	}
 
 
-
-	public void setDamage(int damage) {
-		this.damage = damage;
+	public void setCOOLDOWN(int cOOLDOWN) {
+		COOLDOWN = cOOLDOWN;
 	}
+
+
+	public int getSUNCOINS() {
+		return SUNCOINS;
+	}
+
+
+	public void setSUNCOINS(int sUNCOINS) {
+		SUNCOINS = sUNCOINS;
+	}
+
 	
 	
 
 	
 	public String toString() {
-		return "S ["+ this.life + "]";
+		return "S ["+ this.ENDURANCE + "]";
 	}
 	
 	public static Object getDescription() {
