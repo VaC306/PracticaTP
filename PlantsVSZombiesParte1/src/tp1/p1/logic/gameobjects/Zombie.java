@@ -15,6 +15,42 @@ public class Zombie {
 	
 	
 	
+	public int getENDURANCE() {
+		return ENDURANCE;
+	}
+
+
+
+	public void setENDURANCE(int eNDURANCE) {
+		ENDURANCE = eNDURANCE;
+	}
+
+
+
+	public int getDAMAGE() {
+		return DAMAGE;
+	}
+
+
+
+	public void setDAMAGE(int dAMAGE) {
+		DAMAGE = dAMAGE;
+	}
+
+
+
+	public int getSPEED() {
+		return SPEED;
+	}
+
+
+
+	public void setSPEED(int sPEED) {
+		SPEED = sPEED;
+	}
+
+
+
 	public String toString() {
 		
 		return "Z ["+ this.ENDURANCE + "]";
