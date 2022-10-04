@@ -1,80 +1,75 @@
 package tp1.p1.logic.gameobjects;
-import tp1.p1.logic.Game;
 
 public class Sunflower {
 	
-	public static final int COST = 20;
-	private static final int ENDURANCE = 1;
-	private static final int DAMAGE = 0;
-	private static final int COOLDOWN;
-	private static final int SUNCOINS;
-	
-	private Game game;
+	private int life;
+	private int posX;
+	private int posY;
+	private int damage;
+	private int generate = 10;
 
 	
-	public Sunflower(int COST, int ENDURANCE, int DAMAGE, int COOLDOWN, int SUNCOINS) {
+	public Sunflower(int damage, int life, int posX, int posY, int generate) {
 		super();
-		this.COST = COST;
-		this.ENDURANCE = ENDURANCE;
-		this.DAMAGE = DAMAGE;
-		this.COOLDOWN = COOLDOWN;
-		this.SUNCOINS = SUNCOINS;
+		this.damage = damage;
+		this.life = life;
+		this.posX = posX;
+		this.posY = posY;
+		this.generate = generate;
 	}
 	
 
-	public int getCOST() {
-		return COST;
+	public int getLife() {
+		return life;
 	}
 
 
-	public void setCOST(int cOST) {
-		COST = cOST;
+
+	public void setLife(int life) {
+		this.life = life;
 	}
 
 
-	public int getENDURANCE() {
-		return ENDURANCE;
+
+	public int getPosX() {
+		return posX;
 	}
 
 
-	public void setENDURANCE(int eNDURANCE) {
-		ENDURANCE = eNDURANCE;
+
+	public void setPosX(int posX) {
+		this.posX = posX;
 	}
 
 
-	public int getDAMAGE() {
-		return DAMAGE;
+
+	public int getPosY() {
+		return posY;
 	}
 
 
-	public void setDAMAGE(int dAMAGE) {
-		DAMAGE = dAMAGE;
+
+	public void setPosY(int posY) {
+		this.posY = posY;
 	}
 
 
-	public int getCOOLDOWN() {
-		return COOLDOWN;
+
+	public int getDamage() {
+		return damage;
 	}
 
 
-	public void setCOOLDOWN(int cOOLDOWN) {
-		COOLDOWN = cOOLDOWN;
+
+	public void setDamage(int damage) {
+		this.damage = damage;
 	}
-
-
-	public int getSUNCOINS() {
-		return SUNCOINS;
-	}
-
-
-	public void setSUNCOINS(int sUNCOINS) {
-		SUNCOINS = sUNCOINS;
-	}
-
 	
+	
+
 	
 	public String toString() {
-		return "S ["+ this.ENDURANCE + "]";
+		return "S ["+ this.life + "]";
 	}
 	
 	public static Object getDescription() {

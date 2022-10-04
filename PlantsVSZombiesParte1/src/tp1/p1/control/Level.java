@@ -59,9 +59,4 @@ public enum Level {
 		
 		return 0;
 	}
-
-	int getNumberOfZombies() {
-		
-		return 0;
-	}
 }
