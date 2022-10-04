@@ -62,6 +62,31 @@ public class ZombiesManager {
 		}
 		return canAdd;
 	}
-
+	
+	
+	public int getRemainingZombies() 
+	{
+		return 0;
+	}
+	public boolean allZombiesDied() 
+	{
+		return true;
+	}
+	public boolean zombieArrived() 
+	{
+		return true;
+	}
+	public void update() 
+	{
+		
+	}
+	public boolean isPositionEmpty(int col, int row) 
+	{
+		return true;
+	}
+	public Zombie getZombieInPosition(int col, int row) 
+	{
+		
+	}
 	// TODO fill your code
 }
