@@ -16,18 +16,13 @@ public class Game {
 
 	private Long seed;
 	private Level level;
-	private int cycle;
-	//rand Random
-	private int suncoins;
-	private ZombiesManager zombiesManager;
-	private SunflowerList sunflowers;
-	private PeashooterList peashooters;
 	public static final int NUM_COLS = 8 ;
 	public static final int NUM_ROWS = 4 ;
 
 	public Game(long seed, Level level) {
 		this.seed = seed;
-		this.level = level;		// resetea el juego
+		this.level = level;
+		// resetea el juego
 	}
 
 	/**
@@ -43,19 +38,16 @@ public class Game {
 
 	public boolean isFinished() {
 		// true si termia el juego
-		if(allZombiesDied()) return true;
-		else return	false;
+		return ;
 		}
 
 	public boolean isPlayerDied() {
 		// true si el jugador muere
-		return ; 	
-		}
+		return 	}
 
 	public boolean isPlayerQuits() {
 		// true si el jugador decide cerrar
-		return;
-		}
+		return }
 	
 	public void playerQuits() {
 		// setter de que el jugador cierra
@@ -144,7 +136,7 @@ public class Game {
 	 * @return the game cycles
 	 */
 	public int getCycle() {
-		return cycle; // ciclo actual
+		return  // ciclo actual
 	}
 
 	/**
@@ -153,7 +145,7 @@ public class Game {
 	 * @return the available suncoins
 	 */
 	public int getSuncoins() {
-		return suncoins;// las monedas que tiene
+		return // las monedas que tiene
 	}
 
 	public int getRemainingZombies() {
@@ -169,24 +161,23 @@ public class Game {
 		
 		Sunflower sunflower = // le pide a la lista el objeto, si lo hay
 		if (sunflower != null) {
-			return ;//string del objeto
+			return //string del objeto
 		}
 
 		Peashooter peashooter = // le pide a la lista el objeto, si lo hay
 		if (peashooter != null) {
-			return ;//string del objeto
+			return //string del objeto
 		}
 
 		Zombie zombie = // le pide a la lista el objeto, si lo hay
 		if (zombie != null) {
-			return ;//string del objeto	
+			return //string del objeto
 		}
 		return "";
 	}
 
 	public boolean allZombiesDied() {
-		if(getRemainingZombies() == 0) return true;
-		else return false;// true si ya no quedan zombies
+		return // true si ya no quedan zombies
 	}
 
 	/**

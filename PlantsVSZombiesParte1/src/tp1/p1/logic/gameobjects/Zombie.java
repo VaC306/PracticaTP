@@ -2,58 +2,54 @@ package tp1.p1.logic.gameobjects;
 
 public class Zombie {
 	
-	private static final int ENDURANCE = 5;
-	private static final int DAMAGE = 1;
-	private static final int SPEED;
+	private int damage;
+	private int life;
+	private int posX;
+	private int posY;
 	
-	public Zombie(int ENDURANCE, int DAMAGE, int SPEED) {
+	public Zombie(int damage, int life, int posX, int posY) {
 		super();
-		this.ENDURANCE = ENDURANCE;
-		this.DAMAGE = DAMAGE;
-		this.SPEED = SPEED;
+		this.damage = damage;
+		this.life = life;
+		this.posX = posX;
+		this.posY = posY;
 	}
 	
+	public int getDamage() {
+		return damage;
+	}
+
+	public void setDamage(int damage) {
+		this.damage = damage;
+	}
+
+	public int getLife() {
+		return life;
+	}
+
+	public void setLife(int life) {
+		this.life = life;
+	}
+
+	public int getPosX() {
+		return posX;
+	}
+
+	public void setPosX(int posX) {
+		this.posX = posX;
+	}
+
+	public int getPosY() {
+		return posY;
+	}
+
+	public void setPosY(int posY) {
+		this.posY = posY;
+	}
 	
-	
-	public int getENDURANCE() {
-		return ENDURANCE;
-	}
-
-
-
-	public void setENDURANCE(int eNDURANCE) {
-		ENDURANCE = eNDURANCE;
-	}
-
-
-
-	public int getDAMAGE() {
-		return DAMAGE;
-	}
-
-
-
-	public void setDAMAGE(int dAMAGE) {
-		DAMAGE = dAMAGE;
-	}
-5
-
-
-	public int getSPEED() {
-		return SPEED;
-	}
-
-
-
-	public void setSPEED(int sPEED) {
-		SPEED = sPEED;
-	}
-
-
-
 	public String toString() {
 		
-		return "Z ["+ this.ENDURANCE + "]";
+		return "Z ["+ this.life + "]";
 	}
 
 	
