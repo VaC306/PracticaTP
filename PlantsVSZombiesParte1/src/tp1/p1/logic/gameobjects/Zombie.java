@@ -2,9 +2,9 @@ package tp1.p1.logic.gameobjects;
 
 public class Zombie {
 	
-	private int ENDURANCE;
-	private int DAMAGE;
-	private int SPEED;
+	private static final int ENDURANCE = 5;
+	private static final int DAMAGE = 1;
+	private static final int SPEED;
 	
 	public Zombie(int ENDURANCE, int DAMAGE, int SPEED) {
 		super();
@@ -36,7 +36,7 @@ public class Zombie {
 	public void setDAMAGE(int dAMAGE) {
 		DAMAGE = dAMAGE;
 	}
-
+5
 
 
 	public int getSPEED() {

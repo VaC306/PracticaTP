@@ -16,13 +16,18 @@ public class Game {
 
 	private Long seed;
 	private Level level;
+	private int cycle;
+	//rand Random
+	private int suncoins;
+	private ZombiesManager zombiesManager;
+	private SunflowerList sunflowers;
+	private PeashooterList peashooters;
 	public static final int NUM_COLS = 8 ;
 	public static final int NUM_ROWS = 4 ;
 
 	public Game(long seed, Level level) {
 		this.seed = seed;
-		this.level = level;
-		// resetea el juego
+		this.level = level;		// resetea el juego
 	}
 
 	/**
@@ -38,7 +43,8 @@ public class Game {
 
 	public boolean isFinished() {
 		// true si termia el juego
-		return;
+		if(allZombiesDied()) return true;
+		else return	false;
 		}
 
 	public boolean isPlayerDied() {
@@ -138,7 +144,7 @@ public class Game {
 	 * @return the game cycles
 	 */
 	public int getCycle() {
-		return  // ciclo actual
+		return cycle; // ciclo actual
 	}
 
 	/**
@@ -147,7 +153,7 @@ public class Game {
 	 * @return the available suncoins
 	 */
 	public int getSuncoins() {
-		return // las monedas que tiene
+		return suncoins;// las monedas que tiene
 	}
 
 	public int getRemainingZombies() {
@@ -173,13 +179,14 @@ public class Game {
 
 		Zombie zombie = // le pide a la lista el objeto, si lo hay
 		if (zombie != null) {
-			return ;//string del objeto
+			return ;//string del objeto	
 		}
 		return "";
 	}
 
 	public boolean allZombiesDied() {
-		return // true si ya no quedan zombies
+		if(getRemainingZombies() == 0) return true;
+		else return false;// true si ya no quedan zombies
 	}
 
 	/**
