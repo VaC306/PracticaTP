@@ -4,7 +4,7 @@ public class Peashooter {
 	
 	
 	public static final int COST = 50;
-	private static final int ENDURANCE = 3;
+	private static final int ENDURANCE = 3; //revisar esto
 	private static final int DAMAGE = 1;
 	private int col;
 	private int row;
