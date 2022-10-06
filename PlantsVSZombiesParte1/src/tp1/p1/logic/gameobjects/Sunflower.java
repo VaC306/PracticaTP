@@ -4,8 +4,8 @@ import tp1.p1.logic.Game;
 public class Sunflower {
 	
 	public static final int COST = 50;
-	private static final int ENDURANCE = 3;
-	private static final int DAMAGE = 1;
+	private static final int ENDURANCE = 1;
+	private static final int DAMAGE = 0;
 	private static final int COOLDOWN = 2;
 	private static final int SUNCOINS = 1; //revisar valores
 	private Game game;
@@ -21,13 +21,13 @@ public class Sunflower {
 	}
 	public boolean isInPosition()
 	{
-		
 		return true;
 	}
 
 	public boolean isAlive()
 	{
-		return true;
+		if(lives > 0) return true;
+		return false;
 	}
 	
 	public static Object getDescription() {
@@ -40,13 +40,12 @@ public class Sunflower {
 	}
 	public String toString() {	
 		
-		return "S ["+ this.ENDURANCE + "]";
+		return "S ["+ Sunflower.ENDURANCE + "]";
 	}
 	
 	
-	public int recieveDamage()
+	public void recieveDamage()
 	{
-		
-		return 0;
+		lives--;
 	}
 }

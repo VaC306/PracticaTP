@@ -24,7 +24,8 @@ public class Peashooter {
 
 	public boolean isAlive()
 	{
-		return true;
+		if(lives > 0) return true;
+		return false;
 	}
 	
 	public static Object getDescription() {
@@ -37,13 +38,12 @@ public class Peashooter {
 	}
 	public String toString() {	
 		
-		return "P ["+ this.ENDURANCE + "]";
+		return "P ["+ Peashooter.ENDURANCE + "]";
 	}
 	
 	
-	public int recieveDamage()
+	public void recieveDamage()
 	{
-		
-		return 0;
+		lives--;
 	}
 }
