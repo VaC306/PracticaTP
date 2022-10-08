@@ -18,8 +18,10 @@ public class Peashooter {
 		//constructor del objeto
 	}
 
-	public boolean isInPosition(int col, int row) {
-	   // true si este Peashooter estï¿½ en esa posiciï¿½n
+	public boolean isInPosition(int coln, int rown) {
+	   // true si este Peashooter esta en esa posiciïo½n
+		if(col == coln && row == rown) return true;
+		else return false;
 	}
 
 	public boolean isAlive() {
