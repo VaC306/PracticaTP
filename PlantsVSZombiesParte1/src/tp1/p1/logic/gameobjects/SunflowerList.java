@@ -12,6 +12,7 @@ public class SunflowerList {
 	
 	public void add(Sunflower sunflower) {
 		// añado el sunflower al array, sumo uno al contador
+		count++;
 	}
 	
 	public Sunflower getSunflowerInPosition(int col, int row) {

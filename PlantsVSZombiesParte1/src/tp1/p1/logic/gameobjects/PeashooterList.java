@@ -8,6 +8,7 @@ public class PeashooterList {
 	
 	public PeashooterList(int size) {
 	// constructor : crea lo necesario
+		size = count;
 	}
 	
 	public void add(Peashooter peashooter) {

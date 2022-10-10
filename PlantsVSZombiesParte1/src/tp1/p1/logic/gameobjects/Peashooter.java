@@ -16,11 +16,15 @@ public class Peashooter {
 	
 	public Peashooter(Game game, int col, int row) {
 		//constructor del objeto
+		this.game = game;
+		this.col = col;
+		this.row = row;
+		this.lives = lives;
 	}
 
 	public boolean isInPosition(int coln, int rown) {
 	   // true si este Peashooter esta en esa posiciïo½n
-		if(col == coln && row == rown) return true;
+		if(this.col == coln && this.row == rown) return true;
 		else return false;
 	}
 
@@ -51,7 +55,7 @@ public class Peashooter {
 	// si estï¿½ vivo devuelve el mensaje PEASHOOTER_ICON formateado con sus vidas
 		if(isAlive())
 		{
-			return "P ["+ Peashooter.ENDURANCE + "]";
+			return "P ["+ this.lives + "]";
 		} 
 		else 
 		{

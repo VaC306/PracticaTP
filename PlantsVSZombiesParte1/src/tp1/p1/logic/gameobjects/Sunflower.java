@@ -17,12 +17,19 @@ public class Sunflower {
 	private int lives;
 	private int cooldownCycles;
 	
-	public Sunflower(Game game, int col, int row) {
+	public Sunflower(Game game, int col, int row, int lives, int cooldownCycles) {
 		//constructor del objeto
+		this.game = game;
+		this.col = col;
+		this.row = row;
+		this.lives = lives;
+		this.cooldownCycles = cooldownCycles;
 	}
 
 	public boolean isInPosition(int col, int row) {
 	   // true si este Peashooter está en esa posición
+		if(this.col == col && this.row == row) return true;
+		else return false;
 	}
 
 	public boolean isAlive() {
@@ -40,7 +47,7 @@ public class Sunflower {
 		// le pide al Game que lo ataque
 		if(isAlive())
 		{
-			//buscar zombie
+			
 		}
 		else
 		{
@@ -52,7 +59,7 @@ public class Sunflower {
 	// si está vivo devuelve el mensaje PEASHOOTER_ICON formateado con sus vidas
 		if(isAlive())
 		{
-			return "S ["+ Sunflower.ENDURANCE + "]";
+			return "S ["+ this.lives + "]";
 		} 
 		else 
 		{
