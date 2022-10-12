@@ -14,7 +14,7 @@ public class Peashooter {
 	private int row;
 	private int lives;
 	
-	public Peashooter(Game game, int col, int row) {
+	public Peashooter(Game game, int col, int row, int lives) {
 		//constructor del objeto
 		this.game = game;
 		this.col = col;
@@ -43,11 +43,11 @@ public class Peashooter {
 		// le pide al Game que lo ataque
 		if(isAlive())
 		{
-			//buscar zombie
+			//buscar zombie y game le ataca
 		}
 		else
 		{
-			// game le ataca
+			
 		}
 	}
 

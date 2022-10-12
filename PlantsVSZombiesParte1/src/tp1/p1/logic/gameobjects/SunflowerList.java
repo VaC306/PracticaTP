@@ -8,11 +8,13 @@ public class SunflowerList {
 	
 	public SunflowerList(int size) {
 	// constructor : crea lo necesario
+		this.count = size;
 	}
 	
 	public void add(Sunflower sunflower) {
 		// añado el sunflower al array, sumo uno al contador
-		count++;
+		
+		this.count++;
 	}
 	
 	public Sunflower getSunflowerInPosition(int col, int row) {
@@ -26,6 +28,8 @@ public class SunflowerList {
 	}
 
 	public void update() {
-	// recorre el array , llamando al update de cada sunflower
+	Sunflower sunflowers = new Sunflower(null, count, count, count, count);
+	sunflowers.update();
+	// recorre el array , llamando al update de cada sunflower	
 	}
 }
