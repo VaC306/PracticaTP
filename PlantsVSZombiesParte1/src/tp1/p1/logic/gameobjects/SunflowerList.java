@@ -13,14 +13,31 @@ public class SunflowerList {
 	
 	public void add(Sunflower sunflower) {
 		// añado el sunflower al array, sumo uno al contador
+		Sunflower[] nuevo = new Sunflower[count + 1];
 		
-		this.count++;
+		for(int i = 0; i < count; ++i)
+		{
+			nuevo[i] = this.sunflowers[i];
+		}
+		
+		nuevo[count] = sunflower;
+		count++;
+		sunflowers = nuevo;
+		
 	}
 	
 	public Sunflower getSunflowerInPosition(int col, int row) {
 	  //  busca en el array un sunflower que tenga esa posición en el tablero
 	  // y lo devuelve. Sin nohay devuelve null
-		return;
+		for(int i = 0; i < count; ++i)
+		{
+			if(this.sunflowers[i].isInPosition(col, row))
+			{
+				return this.sunflowers[i];
+			}
+		}
+		
+		return null;
 	}
 	
 	public boolean isPositionEmpty(int col, int row) {
@@ -28,8 +45,11 @@ public class SunflowerList {
 	}
 
 	public void update() {
-	Sunflower sunflowers = new Sunflower(null, count, count, count, count);
-	sunflowers.update();
+	
+		for(int i = 0; i < count; ++i)
+		{
+			this.sunflowers[i].update();
+		}
 	// recorre el array , llamando al update de cada sunflower	
 	}
 }

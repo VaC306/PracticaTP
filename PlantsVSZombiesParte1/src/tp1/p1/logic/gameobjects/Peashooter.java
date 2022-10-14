@@ -14,23 +14,23 @@ public class Peashooter {
 	private int row;
 	private int lives;
 	
-	public Peashooter(Game game, int col, int row, int lives) {
+	public Peashooter(Game game, int col, int row) {
 		//constructor del objeto
 		this.game = game;
 		this.col = col;
 		this.row = row;
-		this.lives = lives;
+		this.lives = ENDURANCE;
 	}
 
-	public boolean isInPosition(int coln, int rown) {
+	public boolean isInPosition(int col, int row) {
 	   // true si este Peashooter esta en esa posiciïo½n
-		if(this.col == coln && this.row == rown) return true;
+		if(this.col == col && this.row == row) return true;
 		else return false;
 	}
 
 	public boolean isAlive() {
 	    // true si le queda alguna vida en el contador de vidas
-		if(lives > 0) return true;
+		if(this.lives > 0) return true;
 		return false;
 	}
 
@@ -55,7 +55,7 @@ public class Peashooter {
 	// si estï¿½ vivo devuelve el mensaje PEASHOOTER_ICON formateado con sus vidas
 		if(isAlive())
 		{
-			return "P ["+ this.lives + "]";
+			return Messages.PEASHOOTER_ICON;
 		} 
 		else 
 		{
@@ -65,7 +65,7 @@ public class Peashooter {
 
 	public void receiveDamage(int damage) {
 		// le resta a las vidas el daï¿½o causado
-		lives -= damage;
+		this.lives -= damage;
 
 	}
 }

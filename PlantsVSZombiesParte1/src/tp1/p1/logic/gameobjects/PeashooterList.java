@@ -8,17 +8,34 @@ public class PeashooterList {
 	
 	public PeashooterList(int size) {
 	// constructor : crea lo necesario
-		size = count;
+		//this.peashooters = new Peashooter[count];
+		this.count = size;
 	}
 	
 	public void add(Peashooter peashooter) {
 		// añado el peashooter al array, sumo uno al contador
+		Peashooter[] nuevo = new Peashooter[count + 1];
+		
+		for(int i = 0; i < count; ++i)
+		{
+			nuevo[i] = this.peashooters[i];
+		}
+		nuevo[count] = peashooter;
+		count++;
+		peashooters = nuevo;
 	}
 	
 	public Peashooter getPeashooterInPosition(int col, int row) {
 	  //  busca en el array un peashooter que tenga esa posición en el tablero
 	  // y lo devuelve. Sin nohay devuelve null
-		return ;
+		for(int i = 0; i < count; ++i)
+		{
+			if(this.peashooters[i].isInPosition(col, row))
+			{
+				return this.peashooters[i];
+			}
+		}
+		return null;
 	}
 	
 	public boolean isPositionEmpty(int col, int row) {
@@ -27,6 +44,10 @@ public class PeashooterList {
 
 	public void update() {
 	// recorre el array , llamando al update de cada peashooter
+		for(int i = 0; i < count; ++i)
+		{
+			this.peashooters[i].update();
+		}
 	}
 }
 

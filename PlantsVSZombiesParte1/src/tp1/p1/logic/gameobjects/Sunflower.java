@@ -17,12 +17,12 @@ public class Sunflower {
 	private int lives;
 	private int cooldownCycles;
 	
-	public Sunflower(Game game, int col, int row, int lives, int cooldownCycles) {
+	public Sunflower(Game game, int col, int row, int cooldownCycles) {
 		//constructor del objeto
 		this.game = game;
 		this.col = col;
 		this.row = row;
-		this.lives = lives;
+		this.lives = ENDURANCE;
 		this.cooldownCycles = cooldownCycles;
 	}
 
@@ -59,7 +59,7 @@ public class Sunflower {
 	// si está vivo devuelve el mensaje PEASHOOTER_ICON formateado con sus vidas
 		if(isAlive())
 		{
-			return "S ["+ this.lives + "]";
+			return Messages.SUNFLOWER_ICON;
 		} 
 		else 
 		{
@@ -69,7 +69,7 @@ public class Sunflower {
 
 	public void receiveDamage(int damage) {
 		// le resta a las vidas el daño causado
-		lives -= damage;
+		this.lives -= damage;
 
 	}
 }
