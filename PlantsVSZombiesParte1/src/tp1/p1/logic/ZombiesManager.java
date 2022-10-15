@@ -19,7 +19,7 @@ public class ZombiesManager {
 	private Random rand;
 
 	private int remainingZombies;
-
+	
 	private ZombieList zombies;
 
 	public ZombiesManager(Game game, Level level, Random rand) {
@@ -58,35 +58,52 @@ public class ZombiesManager {
 				&& isPositionEmpty(Game.NUM_COLS, row);
 
 		if(canAdd) {
+			
+			Zombie zombie = new Zombie(game,Game.NUM_COLS,row);
+			zombies.add(zombie);
 			// TODO fill your code
 		}
 		return canAdd;
 	}
 	
+	public int getRemainingZombies() {
+		return remainingZombies;
+	}
 	
-	public int getRemainingZombies() 
-	{
-		return 0;
-	}
-	public boolean allZombiesDied() 
-	{
-		return true;
-	}
-	public boolean zombieArrived() 
-	{
-		return true;
-	}
-	public void update() 
-	{
+	public boolean isPositionEmpty(int col, int row) {
+		if(zombies.isPositionEmpty(col, row)) {
+			return true;
+		}else {
+			return false;
+		}
 		
 	}
-	public boolean isPositionEmpty(int col, int row) 
-	{
-		return true;
+	
+	public boolean AllZombiesDied() {
+		if(!zombies.ZombieAlived()) {
+			return true;
+		}else {
+			return false;
+		}
 	}
-	public Zombie getZombieInPosition(int col, int row) 
-	{
+	
+	public boolean zombieArrived() {
+		if(!zombies.ZombieArrived()) {
+			return true;
+		}else {
+			return false;
+		}
+	}
+	
+	public Zombie getZombieInPosition(int col,int row) {
+		return zombies.getZombieInPosition(col, row);
+	}
+
+	public void Update() {
+		
+			
 		
 	}
-	// TODO fill your code
+	
+	// TODO fill your code
 }

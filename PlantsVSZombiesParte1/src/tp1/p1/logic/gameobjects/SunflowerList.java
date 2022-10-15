@@ -22,7 +22,7 @@ public class SunflowerList {
 		
 		nuevo[count] = sunflower;
 		count++;
-		sunflowers = nuevo;
+		sunflowers = nuevo;	
 		
 	}
 	

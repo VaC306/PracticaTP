@@ -55,8 +55,13 @@ public enum Level {
 		return buffer.toString();
 	}
 
-	double getZombieFrequency() {
-		
-		return 0;
+	
+
+	public int getNumberOfZombies() {
+		return numberOfZombies;
+	}
+
+	public double getZombieFrequency() {
+		return zombieFrequency;
 	}
 }
