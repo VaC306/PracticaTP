@@ -22,7 +22,7 @@ public class SunflowerList {
 		
 		nuevo[count] = sunflower;
 		count++;
-		sunflowers = nuevo;
+		sunflowers = nuevo;	
 		
 	}
 	
@@ -36,7 +36,6 @@ public class SunflowerList {
 				return this.sunflowers[i];
 			}
 		}
-		
 		return null;
 	}
 	

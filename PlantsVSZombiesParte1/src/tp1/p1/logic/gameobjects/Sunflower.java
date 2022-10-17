@@ -6,10 +6,10 @@ public class Sunflower {
 
 	//declaración de constantes de clase (ver el D.Clases en PRAC1-ayudas.pdf)
 	//declaración de atributos (ver el D.Clases en PRAC1-ayudas.pdf)
-	public static final int COST = 50;
+	public static final int COST = 20;
 	private static final int ENDURANCE = 1;
 	private static final int DAMAGE = 0;
-	private static final int COOLDOWN = 2;
+	private static final int COOLDOWN = 3;
 	private static final int SUNCOINS = 1; //revisar valores
 	private Game game;
 	private int col;
@@ -17,13 +17,13 @@ public class Sunflower {
 	private int lives;
 	private int cooldownCycles;
 	
-	public Sunflower(Game game, int col, int row, int cooldownCycles) {
+	public Sunflower(Game game, int col, int row) {
 		//constructor del objeto
 		this.game = game;
 		this.col = col;
 		this.row = row;
 		this.lives = ENDURANCE;
-		this.cooldownCycles = cooldownCycles;
+		this.cooldownCycles = COOLDOWN;
 	}
 
 	public boolean isInPosition(int col, int row) {
@@ -47,11 +47,12 @@ public class Sunflower {
 		// le pide al Game que lo ataque
 		if(isAlive())
 		{
-			
-		}
-		else
-		{
-			// game le ataca
+			//if(cooldownCycles == )
+			cooldownCycles--;
+			if(cooldownCycles == 0)
+			{
+				cooldownCycles = 3;
+			}
 		}
 	}
 
