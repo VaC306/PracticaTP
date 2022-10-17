@@ -9,13 +9,14 @@ public class Sunflower {
 	public static final int COST = 20;
 	private static final int ENDURANCE = 1;
 	private static final int DAMAGE = 0;
-	private static final int COOLDOWN = 10;
+	private static final int COOLDOWN = 3;
 	private static final int SUNCOINS = 1; //revisar valores
 	private Game game;
 	private int col;
 	private int row;
 	private int lives;
 	private int cooldownCycles;
+	private int suncoins;
 	
 	public Sunflower(Game game, int col, int row) {
 		//constructor del objeto
@@ -23,6 +24,7 @@ public class Sunflower {
 		this.col = col;
 		this.row = row;
 		this.lives = ENDURANCE;
+		this.suncoins = SUNCOINS;
 		this.cooldownCycles = COOLDOWN;
 	}
 
@@ -47,14 +49,12 @@ public class Sunflower {
 		// le pide al Game que lo ataque
 		if(isAlive())
 		{
-			for(int i = 0; i < 8; ++i)
+			//if(cooldownCycles == )
+			cooldownCycles--;
+			if(cooldownCycles == 0)
 			{
-				//buscar zombie
+				cooldownCycles = 3;
 			}
-		}
-		else
-		{
-			
 		}
 	}
 
