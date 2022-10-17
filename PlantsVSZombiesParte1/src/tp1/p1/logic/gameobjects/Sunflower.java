@@ -16,7 +16,6 @@ public class Sunflower {
 	private int row;
 	private int lives;
 	private int cooldownCycles;
-	private int suncoins;
 	
 	public Sunflower(Game game, int col, int row) {
 		//constructor del objeto
@@ -24,7 +23,6 @@ public class Sunflower {
 		this.col = col;
 		this.row = row;
 		this.lives = ENDURANCE;
-		this.suncoins = SUNCOINS;
 		this.cooldownCycles = COOLDOWN;
 	}
 
